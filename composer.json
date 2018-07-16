@@ -1,0 +1,5 @@
+{
+    "require": {
+        "swaggest/php-code-builder": "^0.2.1"
+    }
+}
