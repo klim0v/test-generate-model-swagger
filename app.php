@@ -72,6 +72,14 @@ $builder->classCreatedHook = new \Swaggest\PhpCodeBuilder\JsonSchema\ClassHookCa
             $desc .= "\nBuilt from " . implode("\n" . ' <- ', $fromRefs);
         }
 
+
+        if ($schema->paths !== null) {
+            foreach ($schema->paths as $pathInfo) {
+                print_r($pathInfo);
+            }
+        }
+        die;
+
         $class->setDescription(trim($desc));
 
         $class->setNamespace($appNs);
